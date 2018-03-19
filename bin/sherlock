@@ -135,6 +135,8 @@ linux_distro () {
         # TODO - not tested
         source /etc/init.d/functions.sh
         [ zz`type -t ebegin 2>/dev/null` == "zzfunction" ] && echo DISTRIBUTION="gentoo"
+    elif [ -f /etc/arch-release ] ; then
+    	echo DISTRIBUTION="arch"
 	fi
 }
 
